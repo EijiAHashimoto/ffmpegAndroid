@@ -9,40 +9,43 @@ ARCH_LIST=("armv8a" "armv7a" "x86" "x86-64")
 
 ### Enable FFMPEG BUILD MODULES ####
 ENABLED_CONFIG="\
-		--enable-avcodec \
-		--enable-avformat \
-		--enable-avutil \
-  		--enable-swscale \
-		--enable-swresample \
-		--enable-libdav1d \
-		--enable-muxer=wav,mp4,matroska,webm,mp3,adts,flac,ogg,opus,mpegts,hls,dash,segment \
-    	--enable-demuxer=* \
-	 	--enable-encoder=mjpeg \
-		--enable-decoder=h264,hevc,vp8,vp9,libdav1d,flv,vp6f,adpcm_swf,mpeg4,wmv3,mpeg1video,mpeg2video,mpeg2audio,msmpeg4v2,msmpeg4v3,theora,amrnb,amrwb,dvvideo,h263,mjpeg,png,jpeg,bmp,webp,mp3,aac,ac3,eac3,flac,opus,vorbis,pcm_s16le,pcm_s24le,alac,wma,ass,ssa,mov_text,subrip,webvtt,dvbsub,dvdsub,pgssub \
-		--enable-parser=* \
-  		--enable-bsf=* \
-		--enable-shared "
-
+--enable-small \
+--enable-avcodec \
+--enable-avformat \
+--enable-avutil \
+--enable-swscale \
+--enable-swresample \
+--enable-jni \
+--enable-mediacodec \
+--enable-protocol=file \
+--enable-protocol=pipe \
+--enable-demuxer=mov \
+--enable-demuxer=matroska \
+--enable-parser=h264 \
+--enable-parser=hevc \
+--enable-parser=aac \
+--enable-decoder=h264 \
+--enable-decoder=hevc \
+--enable-decoder=aac \
+--enable-decoder=opus \
+--enable-shared"
 
 ### Disable FFMPEG BUILD MODULES ####
 DISABLED_CONFIG="\
-		--disable-small \
-		--disable-zlib \
- 		--disable-avfilter \
-		--disable-v4l2-m2m \
-		--disable-cuda-llvm \
-		--disable-indevs \
-		--disable-libxml2 \
-		--disable-avdevice \
-		--disable-network \
-		--disable-static \
-		--disable-debug \
-		--disable-ffplay \
-  		--disable-ffprobe \
-		--disable-doc \
-		--disable-symver \
-		--disable-gpl "
-
+--disable-zlib \
+--disable-v4l2-m2m \
+--disable-cuda-llvm \
+--disable-indevs \
+--disable-libxml2 \
+--disable-avdevice \
+--disable-network \
+--disable-static \
+--disable-debug \
+--disable-ffplay \
+--disable-ffprobe \
+--disable-doc \
+--disable-symver \
+--disable-gpl"
 
 
 
