@@ -209,8 +209,8 @@ for ARCH in "${ARCH_LIST[@]}"; do
             		--disable-armv5te \
             		--disable-armv6 \
             		--disable-armv6t2 \
-	      			--enable-asm \
-            		--enable-neon "
+	      			--disable-asm \
+            		--disable-neon "
             ;;
         "x86-64"|"x86_64")
             echo -e "\e[1;32m$ARCH Libraries\e[0m"
